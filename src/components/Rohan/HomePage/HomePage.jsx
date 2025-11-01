@@ -143,8 +143,8 @@ const Homepage = () => {
         {/* Bottom Navigation */}
         <BottomNav />
       </div>
-      <elevenlabs-convai agent-id="agent_3501k8xn1jg6fsk8j9abme625s3e"></elevenlabs-convai>
-      <Script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></Script>
+      <elevenlabs-convai agent-id="agent_3801k8yhrvbff4pa4tmh4f4r9j17"></elevenlabs-convai>
+      <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
     </div>
   );
 };
