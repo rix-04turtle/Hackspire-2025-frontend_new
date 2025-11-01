@@ -7,10 +7,11 @@ import CropDoctor from './CropDoctor';
 import BottomNav from './BottomNav';
 import ChatBot from './ChatBot';
 import Script from 'next/script';
+import NewsSection from './NewsSection';
 
 const Homepage = () => {
   return (
-    <div 
+    <div
       className="min-h-screen pb-16 relative"
       style={{
         backgroundImage: 'url("https://i.pinimg.com/originals/ef/0b/27/ef0b27eebc4ed0cce9617771c9256155.jpg")',
@@ -21,7 +22,7 @@ const Homepage = () => {
     >
       {/* Overlay for better readability */}
       <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
-      
+
       {/* Content wrapper */}
       <div className="relative z-10">
         {/* Navigation Bar */}
@@ -47,8 +48,8 @@ const Homepage = () => {
               </span>
             </Link>
             <div className="space-x-4 flex items-center">
-              <Link 
-                href="/login" 
+              <Link
+                href="/login"
                 className="relative hover:text-green-200 transition-all duration-500 hover:scale-105 
                   text-green-100 group"
               >
@@ -57,8 +58,8 @@ const Homepage = () => {
                   via-green-200 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform 
                   duration-500 ease-out"></span>
               </Link>
-              <Link 
-                href="/signup" 
+              <Link
+                href="/signup"
                 className="relative bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 
                   hover:to-green-700 px-6 py-2.5 rounded-lg transition-all duration-500 ease-out 
                   hover:scale-[1.02] shadow-md hover:shadow-lg hover:shadow-green-500/25
@@ -75,7 +76,7 @@ const Homepage = () => {
           {/* Weather and Rain Probability Section */}
           <section className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-              <div 
+              <div
                 className="group bg-gradient-to-br from-white/95 to-white/90 backdrop-blur-md rounded-2xl 
                   shadow-xl p-6 transform transition-all duration-500 ease-out hover:shadow-2xl 
                   hover:shadow-green-500/10 hover:scale-[1.01] motion-safe:hover:-translate-y-0.5
@@ -90,7 +91,7 @@ const Homepage = () => {
                 </div>
               </div>
 
-              <div 
+              <div
                 className="group bg-gradient-to-br from-white/95 to-white/90 backdrop-blur-md rounded-2xl 
                   shadow-xl p-6 transform transition-all duration-500 ease-out hover:shadow-2xl 
                   hover:shadow-blue-500/10 hover:scale-[1.01] motion-safe:hover:-translate-y-0.5
@@ -122,6 +123,22 @@ const Homepage = () => {
                   hover:scrollbar-thumb-green-300 scrollbar-track-transparent transition-colors duration-300">
                   <CropDoctor className="py-2" />
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* News Section */}
+          <section className="max-w-6xl mx-auto">
+            <div className="group bg-gradient-to-br from-white/95 to-white/90 backdrop-blur-md rounded-2xl 
+              shadow-xl p-6 transform transition-all duration-500 ease-out hover:shadow-2xl 
+              border border-white/10 hover:border-green-200/30 relative overflow-hidden animate-fade-in delay-300"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-green-600/5 opacity-0 
+                group-hover:opacity-100 transition-all duration-700 ease-out" />
+              <div className="absolute inset-x-0 -bottom-1 h-px bg-gradient-to-r from-transparent 
+                via-green-200/30 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
+              <div className="relative z-10">
+                <NewsSection />
               </div>
             </div>
           </section>
